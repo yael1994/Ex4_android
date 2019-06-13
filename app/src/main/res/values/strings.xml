@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ex4</string>
+    <string name="IP">IP:</string>
+    <string name="Port">Port:</string>
+    <string name="Button">Connect</string>
+
+</resources>
