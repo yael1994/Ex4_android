@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button = (Button) findViewById(R.id.button);
-        IP=(EditText)findViewById(R.id.IP);
-        Port=(EditText)findViewById(R.id.port);
+        IP= findViewById(R.id.IP);
+        Port=findViewById(R.id.port);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,16 +31,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void openActionJoistic(){
-//       InetAddress inet=null;
-//        int portSend=Integer.parseInt( Port.getText().toString());
-//        byte[] ip = IP.getText().toString().getBytes();
-//        try {
-//            inet = InetAddress.getByAddress(ip);
-//            }catch (Exception e){
-//        }
-//        Client client = new Client(inet,portSend);
+        int port =Integer.parseInt(Port.getText().toString());
+       // Client client = new Client(IP.getText().toString(),port);
+       // client.Connect();
         Intent intent= new Intent(this, JoystickActivity.class);
         //intent.putExtra("Client",client);
+        intent.putExtra("ip", IP.getText().toString());
+        intent.putExtra("port",port);
+
         startActivity(intent);
     }
 
